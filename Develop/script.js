@@ -71,12 +71,12 @@ function generatePassword() {
 
   var finalPass = ""
   var passAmount = parseInt(passLength)
-  for (var i = 0; i < passLength; i++) {
-    Math.floor(Math.random() * passAmount);
-    finalPass += passArray[characterNumber];
+  for (var i = 0; i < passAmount; i++) {
+    var randIndex = Math.floor(Math.random() * passArray.length);
+    finalPass += passArray[randIndex];
 
-    return finalPass
   }
+  return finalPass
 }
 
 // Write password to the #password input
